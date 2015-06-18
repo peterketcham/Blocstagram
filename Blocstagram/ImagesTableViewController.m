@@ -7,9 +7,12 @@
 //
 
 #import "ImagesTableViewController.h"
+#import "DataSource.h"
+#import "Media.h"
+#import "User.h"
+#import "Comment.h"
 
 @interface ImagesTableViewController ()
-@property (nonatomic, strong) NSMutableArray *images;
 @end
 
 @implementation ImagesTableViewController
@@ -20,7 +23,6 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.images = [NSMutableArray array];
     }
     return self;
 }
@@ -28,13 +30,6 @@
 - (void)viewDidLoad {
     NSLog(@"viewDidLoad called");
     [super viewDidLoad];
-    for (int i = 1; i <= 10; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
-        UIImage *image = [UIImage imageNamed:imageName];
-        if (image) {
-            [self.images addObject:image];
-        }
-    }
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
 }
 
@@ -47,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"tableView:numberOfRowsInSection: called");
-    return self.images.count;
+    return [DataSource items].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -69,16 +64,17 @@
         [cell.contentView addSubview:imageView];
     }
     
-    UIImage *image = self.images[indexPath.row];
-    imageView.image = image;
+    Media *item = [DataSource items][indexPath.row];
+    imageView.image = item.image;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"tableView:heightForRowAtIndexPath: called");
-    UIImage *image = self.images[indexPath.row];
-    return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+    Media *item = [DataSource items][indexPath.row];
+    UIImage *image = item.image;
+    return (image.size.height/image.size.width)*CGRectGetWidth(self.view.frame);
 }
 
 // Override to support conditional editing of the table view.
@@ -88,17 +84,17 @@
 }
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+/*- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"tableView:commitEditingStyle:forRowAtIndexPath: called");
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [self.images removeObjectAtIndex:indexPath.row];
+        // Need to remove a row from [DataSource sharedInstance].mediaItems
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
     NSLog(@"tableView:commitEditingStyle:forRowAtIndexPath: completed");
-}
+}*/
 
 /*
 // Override to support rearranging the table view.

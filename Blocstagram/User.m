@@ -1,0 +1,13 @@
+//
+//  User.m
+//  Blocstagram
+//
+//  Created by Peter Ketcham on 6/17/15.
+//  Copyright (c) 2015 Peter Ketcham. All rights reserved.
+//
+
+#import "User.h"
+
+@implementation User
+
+@end
