@@ -11,7 +11,9 @@
 #import "Media.h"
 #import "Comment.h"
 
-@interface DataSource ()
+@interface DataSource () {
+    NSMutableArray *_mediaItems;
+}
 @property (nonatomic, strong) NSArray *mediaItems;
 @end
 
@@ -40,6 +42,11 @@
     return [DataSource sharedInstance].mediaItems;
 }
 
+- (void)deleteMediaItem:(Media *)item {
+    NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+    [mutableArrayWithKVO removeObject:item];
+}
+
 - (void)addRandomData {
     NSMutableArray *randomMediaItems = [NSMutableArray array];
     
@@ -51,6 +58,8 @@
             Media *media = [[Media alloc] init];
             media.user = [self randomUser];
             media.image = image;
+            // Can't find the caption set anywhere, so set it here.
+            media.caption = @"This is the caption";
             
             NSUInteger commentCount = arc4random_uniform(10);
             NSMutableArray *randomComments = [NSMutableArray array];
@@ -104,12 +113,39 @@
     NSString *alphabet = @"abcdefghijklmnopqrstuvwxyz";
     
     NSMutableString *s = [NSMutableString string];
-    for (NSUInteger i = 0U; i < len; i++) {
+        for (NSUInteger i = 0; i < len; i++) {
+
         u_int32_t r = arc4random_uniform((u_int32_t)[alphabet length]);
         unichar c = [alphabet characterAtIndex:r];
         [s appendFormat:@"%C", c];
     }
     return [NSString stringWithString:s];
+}
+
+#pragma mark - Key/Value Observing
+
+- (NSUInteger)countOfMediaItems {
+    return self.mediaItems.count;
+}
+
+- (id)objectInMediaItemsAtIndex:(NSUInteger)index {
+    return [self.mediaItems objectAtIndex:index];
+}
+
+- (NSArray *)mediaItemsAtIndexes:(NSIndexSet *)indexes {
+    return [self.mediaItems objectsAtIndexes:indexes];
+}
+
+- (void)insertObject:(Media *)object inMediaItemsAtIndex:(NSUInteger)index {
+    [_mediaItems insertObject:object atIndex:index];
+}
+
+- (void)removeObjectFromMediaItemsAtIndex:(NSUInteger)index {
+    [_mediaItems removeObjectAtIndex:index];
+}
+
+- (void)replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object {
+    [_mediaItems replaceObjectAtIndex:index withObject:object];
 }
 
 @end
