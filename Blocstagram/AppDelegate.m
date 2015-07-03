@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ImagesTableViewController.h"
+#import "LoginViewController.h"
+#import "DataSource.h"
 
 @interface AppDelegate ()
 @end
@@ -16,11 +18,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ImagesTableViewController alloc] init]];
-    // Override point for customization after application launch.
+    [DataSource sharedInstance]; // create the data source (so it can receive the access token notification)
+    UINavigationController *navVC = [[UINavigationController alloc] init];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    loginVC.title = @"Login";
+    loginVC.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(resetLoginViewController:)];
+    [navVC setViewControllers:@[loginVC] animated:YES];
+    [[NSNotificationCenter defaultCenter] addObserverForName:LoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        ImagesTableViewController *imagesVC = [[ImagesTableViewController alloc] init];
+        [navVC setViewControllers:@[imagesVC] animated:YES];
+    }];
+    self.window.rootViewController = navVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)resetLoginViewController:(id)sender {
+    NSLog(@"resetLoginViewController called");
+    UINavigationController *navVC = [[UINavigationController alloc] init];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    loginVC.title = @"Login";
+    loginVC.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(resetLoginViewController:)];
+    [navVC setViewControllers:@[loginVC] animated:YES];
+    [[NSNotificationCenter defaultCenter] addObserverForName:LoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        ImagesTableViewController *imagesVC = [[ImagesTableViewController alloc] init];
+        [navVC setViewControllers:@[imagesVC] animated:YES];
+    }];
+    self.window.rootViewController = navVC;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

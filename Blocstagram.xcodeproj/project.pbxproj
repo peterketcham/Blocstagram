@@ -22,6 +22,7 @@
 		B77738D41B31E62000D13DA7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B77738D31B31E62000D13DA7 /* User.m */; };
 		B77F54361B31FCC200EBEB75 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F54351B31FCC200EBEB75 /* Media.m */; };
 		B77F54391B32009200EBEB75 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F54381B32009200EBEB75 /* Comment.m */; };
+		B7C0F79B1B45C0340007EEC6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */; };
 		B7C7A1E31B33A899006B3EDB /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A1E21B33A899006B3EDB /* MediaTableViewCell.m */; };
 		B7EB3E0C1B2F7E6100490E98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EB3E0B1B2F7E6100490E98 /* main.m */; };
 		B7EB3E0F1B2F7E6100490E98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EB3E0E1B2F7E6100490E98 /* AppDelegate.m */; };
@@ -62,6 +63,8 @@
 		B77F54351B31FCC200EBEB75 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		B77F54371B32009200EBEB75 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B77F54381B32009200EBEB75 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		B7C0F7991B45C0340007EEC6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B7C7A1E11B33A899006B3EDB /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		B7C7A1E21B33A899006B3EDB /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		B7EB3E061B2F7E6100490E98 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,8 @@
 				B75AC7281B2F8579007B337D /* 9.jpg */,
 				B75AC7291B2F8579007B337D /* 10.jpg */,
 				B75AC7341B2F871D007B337D /* ImagesTableViewController.h */,
+				B7C0F7991B45C0340007EEC6 /* LoginViewController.h */,
+				B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */,
 				B7C7A1E11B33A899006B3EDB /* MediaTableViewCell.h */,
 				B7C7A1E21B33A899006B3EDB /* MediaTableViewCell.m */,
 				B75AC7351B2F871D007B337D /* ImagesTableViewController.m */,
@@ -297,6 +302,7 @@
 				B7C7A1E31B33A899006B3EDB /* MediaTableViewCell.m in Sources */,
 				B77F54361B31FCC200EBEB75 /* Media.m in Sources */,
 				B7EB3E0F1B2F7E6100490E98 /* AppDelegate.m in Sources */,
+				B7C0F79B1B45C0340007EEC6 /* LoginViewController.m in Sources */,
 				B7150AF71B3208FC00332E0A /* DataSource.m in Sources */,
 				B7EB3E0C1B2F7E6100490E98 /* main.m in Sources */,
 				B75AC7361B2F871D007B337D /* ImagesTableViewController.m in Sources */,
