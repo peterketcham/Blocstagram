@@ -35,7 +35,6 @@
 }
 
 - (void)resetLoginViewController:(id)sender {
-    NSLog(@"resetLoginViewController called");
     UINavigationController *navVC = [[UINavigationController alloc] init];
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     loginVC.title = @"Login";

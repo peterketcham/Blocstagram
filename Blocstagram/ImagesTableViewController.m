@@ -20,7 +20,6 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    NSLog(@"initWithStyle: called");
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -33,7 +32,6 @@
 }
 
 - (void)viewDidLoad {
-    NSLog(@"viewDidLoad called");
     [super viewDidLoad];
     [[DataSource sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -112,12 +110,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"tableView:numberOfRowsInSection: called");
     return [DataSource items].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"tableView:cellForRowAtIndexPath: called");
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     return cell;
@@ -133,7 +129,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"tableView:heightForRowAtIndexPath: called");
     Media *item = [DataSource items][indexPath.row];
     return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
@@ -144,7 +139,6 @@
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"tableView:canEditRowAtIndexPath: called");
     return YES;
 }
 
