@@ -20,6 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [DataSource sharedInstance]; // create the data source (so it can receive the access token notification)
     UINavigationController *navVC = [[UINavigationController alloc] init];
+    if (![DataSource sharedInstance].accessToken) {
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     loginVC.title = @"Login";
     loginVC.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(resetLoginViewController:)];
@@ -28,6 +29,10 @@
         ImagesTableViewController *imagesVC = [[ImagesTableViewController alloc] init];
         [navVC setViewControllers:@[imagesVC] animated:YES];
     }];
+    } else {
+        ImagesTableViewController *imagesVC = [[ImagesTableViewController alloc] init];
+        [navVC setViewControllers:@[imagesVC] animated:YES];
+    }
     self.window.rootViewController = navVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
