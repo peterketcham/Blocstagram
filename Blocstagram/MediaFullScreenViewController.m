@@ -42,8 +42,6 @@
     [self.tap requireGestureRecognizerToFail:self.doubleTap];
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(displayActivityViewController:)];
-
 }
 
 - (void)didReceiveMemoryWarning {
