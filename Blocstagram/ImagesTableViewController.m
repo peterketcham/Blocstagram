@@ -171,7 +171,7 @@
     [self presentViewController:fullScreenVC animated:YES completion:nil];
 }
 
-- (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
+- (void)cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
     NSMutableArray *itemsToShare = [NSMutableArray array];
     if (cell.mediaItem.caption.length > 0) {
         [itemsToShare addObject:cell.mediaItem.caption];
@@ -183,6 +183,10 @@
         UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
         [self presentViewController:activityVC animated:YES completion:nil];
     }
+}
+
+- (void)cellDidPressLikeButton:(MediaTableViewCell *)cell {
+    [[DataSource sharedInstance] toggleLikeOnMediaItem:cell.mediaItem];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate

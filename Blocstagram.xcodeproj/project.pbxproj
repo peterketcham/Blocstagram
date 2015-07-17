@@ -23,6 +23,8 @@
 		B75AC7331B2F8579007B337D /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B75AC7291B2F8579007B337D /* 10.jpg */; };
 		B75AC7361B2F871D007B337D /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75AC7351B2F871D007B337D /* ImagesTableViewController.m */; };
 		B77738D41B31E62000D13DA7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B77738D31B31E62000D13DA7 /* User.m */; };
+		B7779CB01B584714001F9087 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7779CAF1B584714001F9087 /* CircleSpinnerView.m */; };
+		B7779CB31B585BE1001F9087 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B7779CB21B585BE1001F9087 /* LikeButton.m */; };
 		B77F54361B31FCC200EBEB75 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F54351B31FCC200EBEB75 /* Media.m */; };
 		B77F54391B32009200EBEB75 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F54381B32009200EBEB75 /* Comment.m */; };
 		B7C0F79B1B45C0340007EEC6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */; };
@@ -68,6 +70,10 @@
 		B75AC7351B2F871D007B337D /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
 		B77738D21B31E62000D13DA7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B77738D31B31E62000D13DA7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B7779CAE1B584714001F9087 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
+		B7779CAF1B584714001F9087 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpinnerView.m; sourceTree = "<group>"; };
+		B7779CB11B585BE1001F9087 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		B7779CB21B585BE1001F9087 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 		B77F54341B31FCC200EBEB75 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		B77F54351B31FCC200EBEB75 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		B77F54371B32009200EBEB75 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -135,6 +141,10 @@
 				B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */,
 				B7C7A1E11B33A899006B3EDB /* MediaTableViewCell.h */,
 				B7C7A1E21B33A899006B3EDB /* MediaTableViewCell.m */,
+				B7779CAE1B584714001F9087 /* CircleSpinnerView.h */,
+				B7779CAF1B584714001F9087 /* CircleSpinnerView.m */,
+				B7779CB11B585BE1001F9087 /* LikeButton.h */,
+				B7779CB21B585BE1001F9087 /* LikeButton.m */,
 				B70C43AA1B504D67006B17D2 /* MediaFullScreenViewController.h */,
 				B70C43AB1B504D67006B17D2 /* MediaFullScreenViewController.m */,
 				B75AC7351B2F871D007B337D /* ImagesTableViewController.m */,
@@ -376,6 +386,8 @@
 				B7C0F79B1B45C0340007EEC6 /* LoginViewController.m in Sources */,
 				B7150AF71B3208FC00332E0A /* DataSource.m in Sources */,
 				B7EB3E0C1B2F7E6100490E98 /* main.m in Sources */,
+				B7779CB31B585BE1001F9087 /* LikeButton.m in Sources */,
+				B7779CB01B584714001F9087 /* CircleSpinnerView.m in Sources */,
 				B75AC7361B2F871D007B337D /* ImagesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
