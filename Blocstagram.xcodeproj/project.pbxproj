@@ -10,6 +10,7 @@
 		A2A3AB319F0C44634671BD53 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC3E31CFDCAA56B8BE3D7 /* libPods.a */; };
 		B70C43AC1B504D67006B17D2 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C43AB1B504D67006B17D2 /* MediaFullScreenViewController.m */; };
 		B70C43AF1B5062E3006B17D2 /* MediaFullScreenAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C43AE1B5062E3006B17D2 /* MediaFullScreenAnimator.m */; };
+		B710ED661B5995AF006CC466 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B710ED651B5995AF006CC466 /* ComposeCommentView.m */; };
 		B7150AF71B3208FC00332E0A /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B7150AF61B3208FC00332E0A /* DataSource.m */; };
 		B75AC72A1B2F8579007B337D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B75AC7201B2F8579007B337D /* 1.jpg */; };
 		B75AC72B1B2F8579007B337D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B75AC7211B2F8579007B337D /* 2.jpg */; };
@@ -54,6 +55,8 @@
 		B70C43AB1B504D67006B17D2 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		B70C43AD1B5062E3006B17D2 /* MediaFullScreenAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenAnimator.h; sourceTree = "<group>"; };
 		B70C43AE1B5062E3006B17D2 /* MediaFullScreenAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenAnimator.m; sourceTree = "<group>"; };
+		B710ED641B5995AF006CC466 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		B710ED651B5995AF006CC466 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 		B7150AF51B3208FC00332E0A /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		B7150AF61B3208FC00332E0A /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B75AC7201B2F8579007B337D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				B77F54371B32009200EBEB75 /* Comment.h */,
 				B7150AF51B3208FC00332E0A /* DataSource.h */,
 				B7150AF61B3208FC00332E0A /* DataSource.m */,
+				B710ED641B5995AF006CC466 /* ComposeCommentView.h */,
+				B710ED651B5995AF006CC466 /* ComposeCommentView.m */,
 				B77F54381B32009200EBEB75 /* Comment.m */,
 				B7EB3E0E1B2F7E6100490E98 /* AppDelegate.m */,
 				B7EB3E131B2F7E6100490E98 /* Main.storyboard */,
@@ -387,6 +392,7 @@
 				B7150AF71B3208FC00332E0A /* DataSource.m in Sources */,
 				B7EB3E0C1B2F7E6100490E98 /* main.m in Sources */,
 				B7779CB31B585BE1001F9087 /* LikeButton.m in Sources */,
+				B710ED661B5995AF006CC466 /* ComposeCommentView.m in Sources */,
 				B7779CB01B584714001F9087 /* CircleSpinnerView.m in Sources */,
 				B75AC7361B2F871D007B337D /* ImagesTableViewController.m in Sources */,
 			);
