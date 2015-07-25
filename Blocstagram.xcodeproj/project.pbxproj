@@ -100,6 +100,7 @@
 		B77F54351B31FCC200EBEB75 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		B77F54371B32009200EBEB75 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B77F54381B32009200EBEB75 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		B7B088611B62D77600F1B305 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B7C0F7991B45C0340007EEC6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B7C0F79A1B45C0340007EEC6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B7C7A1E11B33A899006B3EDB /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 				B75AC7351B2F871D007B337D /* ImagesTableViewController.m */,
 				B74FF8441B61CE460057B243 /* PostToInstagramViewController.h */,
 				B74FF8451B61CE460057B243 /* PostToInstagramViewController.m */,
+				B7B088611B62D77600F1B305 /* PrefixHeader.pch */,
 				B76F77101B607D400066401D /* CropBox.h */,
 				B76F77111B607D400066401D /* CropBox.m */,
 				B70C43AD1B5062E3006B17D2 /* MediaFullScreenAnimator.h */,
