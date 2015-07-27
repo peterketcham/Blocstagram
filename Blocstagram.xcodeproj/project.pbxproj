@@ -13,6 +13,8 @@
 		B710ED661B5995AF006CC466 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B710ED651B5995AF006CC466 /* ComposeCommentView.m */; };
 		B7150AF71B3208FC00332E0A /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B7150AF61B3208FC00332E0A /* DataSource.m */; };
 		B7162ADA1B618BEC003B572D /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7162AD91B618BEC003B572D /* ImageLibraryViewController.m */; };
+		B724932B1B66DCD700D45B72 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B724932A1B66DCD700D45B72 /* UserTests.m */; };
+		B724932D1B66E56600D45B72 /* CommentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B724932C1B66E56600D45B72 /* CommentTests.m */; };
 		B74FF8461B61CE460057B243 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74FF8451B61CE460057B243 /* PostToInstagramViewController.m */; };
 		B75AC72A1B2F8579007B337D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B75AC7201B2F8579007B337D /* 1.jpg */; };
 		B75AC72B1B2F8579007B337D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B75AC7211B2F8579007B337D /* 2.jpg */; };
@@ -68,6 +70,8 @@
 		B7150AF61B3208FC00332E0A /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B7162AD81B618BEC003B572D /* ImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLibraryViewController.h; sourceTree = "<group>"; };
 		B7162AD91B618BEC003B572D /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
+		B724932A1B66DCD700D45B72 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		B724932C1B66E56600D45B72 /* CommentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTests.m; sourceTree = "<group>"; };
 		B74FF8441B61CE460057B243 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToInstagramViewController.h; sourceTree = "<group>"; };
 		B74FF8451B61CE460057B243 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToInstagramViewController.m; sourceTree = "<group>"; };
 		B75AC7201B2F8579007B337D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 			children = (
 				B7EB3E251B2F7E6100490E98 /* BlocstagramTests.m */,
 				B7EB3E231B2F7E6100490E98 /* Supporting Files */,
+				B724932A1B66DCD700D45B72 /* UserTests.m */,
+				B724932C1B66E56600D45B72 /* CommentTests.m */,
 			);
 			path = BlocstagramTests;
 			sourceTree = "<group>";
@@ -446,6 +452,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B724932B1B66DCD700D45B72 /* UserTests.m in Sources */,
+				B724932D1B66E56600D45B72 /* CommentTests.m in Sources */,
 				B7EB3E261B2F7E6100490E98 /* BlocstagramTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
